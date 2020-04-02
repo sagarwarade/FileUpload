@@ -1,0 +1,24 @@
+<div class="container" >
+    <div class="row">
+      <div class="col s8 offset-2">
+        <div class="card-panel teal lighten-2">
+          <h4 class="center white-text">Image Uploader</h4>
+        </div>
+        <br>
+        <form #imageForm=ngForm (ngSubmit)="OnSubmit(ImageTitle,Image)">
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" #ImageTitle ngModel name="ImageTitle" id="ImageTitle" >
+              <label for="ImageTitle">ImageTitle</label>
+            </div>
+          </div>
+          <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+         
+          <img [src]="imageUrl"  style="width:350px;height:250px">
+          <br>
+          <button type="submit" class="btn-large btn-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+

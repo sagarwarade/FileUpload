@@ -1,0 +1,30 @@
+{
+  "name": "emp-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set DEBUG=app & nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs-extra": "^8.1.0",
+    "mssql": "^6.0.1",
+    "multer": "^1.4.2",
+    "ng2-file-upload": "^1.4.0",
+    "urlencode": "^1.1.0",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
