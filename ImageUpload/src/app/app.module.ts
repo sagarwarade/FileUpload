@@ -1,25 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FileSelectDirective } from 'ng2-file-upload';
+
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import{UploadImageComponent} from './upload-image/upload-image.component';
-import { UploadImage2Component } from './upload-image2/upload-image2.component'
+
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment'
 @NgModule({
   declarations: [
     AppComponent,
-    FileSelectDirective,
-    UploadImageComponent,
-    UploadImage2Component
+    
+    UploadImageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
